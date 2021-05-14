@@ -11,7 +11,7 @@ const defaultProps = {
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: 'red',
+        backgroundColor: '#BB0B0B',
         color: props => props.color,
     },
     b1: {
