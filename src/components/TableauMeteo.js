@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Box from '@material-ui/core/Box';
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import ButtonBar from "./ButtonBar";
 
 const defaultProps = {
     bgcolor: 'background.paper',
-    m: 1,
+    m: 0,
     style: { width: '5rem', height: '5rem' },
-    borderColor: 'text.primary',
+    borderColor: 'black',
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -15,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
         color: props => props.color,
     },
     b1: {
-        backgroundColor : 'greenyellow'
     },
     b2: {
         backgroundColor : 'red'
@@ -25,12 +25,17 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TableauMeteo() {
     const classes = useStyles();
+    const [color,setBackgroungColor] = useState('#F00000');
     return (
         <>
         <Box display="flex" justifyContent="center">
             <Box border={1} {...defaultProps} className={classes.b1} />
             <Box border={1} {...defaultProps} className={classes.b2} />
+            <Box border={1} {...defaultProps} className={classes.b2} />
+            <Box border={1} {...defaultProps} className={classes.b2} />
+            <ButtonBar></ButtonBar>
         </Box>
         </>
     );
+
 }
