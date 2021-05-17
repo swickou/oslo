@@ -19,7 +19,7 @@ export default function ButtonBar() {
 
     return (
         <div>
-            <ButtonColor/>
+            <ButtonColor />
             <ButtonColor/>
             <ButtonColor/>
             <ButtonColor/>
@@ -31,7 +31,7 @@ function ButtonColor() {
     const classes = useStyles();
     return (
         <div>
-            <Button variant="contained" size="small"  className={classes.margin}>
+            <Button variant="contained" size="small"  className={classes.margin} >
                 |
             </Button>
         </div>
